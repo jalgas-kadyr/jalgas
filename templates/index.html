@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 , maximum-scale=1" />
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+<div class="absolute" id="absolute">
+    <div class="buttonMenu"><img width="60px" height="40px" src="{% static 'img/menu.png' %}" alt=""></div>
+    <div class="menu">
+        <div class="sub"><div class="m" id="main">Главная</div></div>
+        <div class="sub"><div class="m" id="about">О курсах</div></div>
+        <div class="sub"><div class="m" id="prices">Курсы и цены</div></div>
+        <div class="sub"><div class="m" id="steps">Шаги обучение</div></div>
+        <div class="sub"><div class="m" id="apply">Записаться на курсы</div></div>
+    </div>
+</div>
+<div class="header">
+    <div class="name">NAUCHU</div>
+    <div class="jalgas">Jalgas Kadyr</div>
+    <div class="wrapper" id="menu">
+        <div class="menu">
+            <div class="sub"><div class="m" id="main">Главная</div></div>
+            <div class="sub"><div class="m" id="about">О курсах</div></div>
+            <div class="sub"><div class="m" id="prices">Курсы и цены</div></div>
+            <div class="sub"><div class="m" id="steps">Шаги обучение</div></div>
+            <div class="sub"><div class="m" id="apply">Записаться на курсы</div></div>
+        </div>
+    </div>
+
+</div>
+<div class="wrapper">
+    <div class="section1">
+        <div class="left">
+            <h1>Индивидуальный репетитор по веб разработке</h1>
+            <div class="des">Обучение веб разработки с нуля до хостинга на сервере. Индивидуальный подход к каждому студенту</div>
+            <button class="about abutton" id="about">О курсах</button>
+        </div>
+        <div class="right">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h1>Записаться на бесплатный пробный урок</h1>
+                <input type="text" placeholder="Имя"><br>
+                <hr>
+                <input type="text" placeholder="Номер телефона"><br>
+                <hr>
+
+                <button>Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="about">
+        <h1>О курсах</h1>
+        <div class="punkts">
+            <div class="punkt">Обучение с нуля до стажер разработчика</div>
+            <div class="punkt">Индивидуальный подход к каждому студенту</div>
+            <div class="punkt">Уже после двух месяцев научиться делать такие сайты</div>
+            <div class="punkt">Самый гибкий и максимально для вас удобный график от 8 утра до 12 ночи</div>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="prices">
+        <h1>Курсы и цены</h1>
+        <div class="punkts">
+            <div class="punkt kurs">
+                <div class="h1">Стандарт</div>
+                <div class="des">Студент будет знать базовые знание языков HTML, CSS и научиться делать одностраничные сайты</div>
+                <div class="des">2 недели по 3 урока в неделю</div>
+                <div class="des">5000 тенге</div>
+            </div>
+            <div class="punkt kurs">
+                <div class="h1">Стандарт +</div>
+                <div class="des">Студент будет знать базовые знание языков HTML, CSS, JavaScript будет акцентироваться JQuery  и научиться делать сайты более оживленными и добавлять интересные эффекты</div>
+                <div class="des">3 недели по 3 урока в неделю</div>
+                <div class="des">8000 тенге</div>
+            </div>
+            <div class="punkt kurs">
+                <div class="h1">Продвинутый</div>
+                <div class="des">Студент будет знать базовые знание языков HTML, CSS, JavaScript и язык программирование python в том числе фреймворк Django для разработки сложных структурных сайтов и научиться делать тестовые порталы для регистраций людей или предметов, будет знать работу с базами данных</div>
+                <div class="des">5 недели по 3 урока в неделю</div>
+                <div class="des">15000 тенге</div>
+            </div>
+            <div class="punkt kurs">
+                <div class="h1">Конструктор</div>
+                <div class="des">Студент сам выбирает что ему учить с помощью пробного урока и цена определяется часами уроков</div>
+                <div class="des">1 час урока = 900 тенге</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="steps">
+        <h1>Шаги обучения</h1>
+        <div class="step">
+            <span>Шаг 1 - Введение в веб разработку</span>
+            <span>Шаг 2 - Основные приципы</span>
+            <span>Шаг 3 - Примеры </span>
+            <span>Шаг 4 - Практика</span>
+            <span>Шаг 5 - Задание на дедлайн</span>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="right" id="apply">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1>Записаться на курс</h1>
+            <input type="text" placeholder="Имя"><br>
+            <hr>
+            <input type="text" placeholder="Номер телефона"><br>
+            <hr>
+            <div class="wrapper">
+                <select name="course" id="">
+                    <option disabled selected>Выберите курс</option>
+                    <option>Стандарт</option>
+                    <option>Стандарт +</option>
+                    <option>Продвинутый</option>
+                    <option>Конструктор</option>
+                </select>
+            </div>
+            <button>Отправить</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
